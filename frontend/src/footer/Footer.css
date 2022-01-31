@@ -1,3 +1,12 @@
 .Form {
     
 }
+
+.Footer {
+    bottom: 0;
+    position: fixed;
+    background-color: #000;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    width: 100vw;
+}
