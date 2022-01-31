@@ -5,6 +5,7 @@ import React from 'react';
 import twitterLogo from './twitter-logo.svg';
 import linkedinLogo from './linkedin-logo.svg';
 import discordLogo from './discord-logo.svg';
+import dsocLogo from './soton-dSoc-icon-white.svg';
 
 class Footer extends React.Component {
     render() {
@@ -27,9 +28,14 @@ class Footer extends React.Component {
                         </img>
                     </div>
                 </div>
-                <div class="menutext" id="home">Home</div>
-                <div class="menutext" id="home">About</div>
-                <div class="menutext" id="home">Events</div>
+                <div class="menutext left" id="home">Home</div>
+                <div class="menutext left" id="home">About</div>
+                <div class="menutext left" id="home">Events</div>
+                <div id="dsoc-icon">
+                    <img id="dsoc-logo" src={dsocLogo}></img>
+                </div>
+                <div class="menutext right">Subscribe to our newsletter</div>
+                <div id="newsletter-box">Hllo</div>
             </div>
         );
     };
