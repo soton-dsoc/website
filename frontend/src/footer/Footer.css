@@ -27,18 +27,19 @@
     left: 0;
 }
 
-.menutext {
+.footertext {
     color: #fff;
     font-family: 'Roboto Mono', Courier, monospace;
     font-weight: 300;
+    font-size: 16px;
 }
-.menutext.left {
+.footertext.left {
     text-align: left;
     padding-left: 40px;
     padding-top: 15px;
 }
 
-.menutext.right {
+.footertext.right {
     text-align: right;
     padding-right: 40px;
     padding-bottom: 30px;
@@ -53,13 +54,31 @@
     right: 0;
 }
 
-#newsletter-box {
-    align-content: right;
+form {
+    border-radius: 5px;
+    display: inline-block;
+}
+
+#email {
     height: 10px;
     width: 300px;
     border-style: solid;
     border-width: 5px;
     border-color: #fff;
     color: #fff;
+    font-family: 'Roboto Mono', 'Courier', 'monospace';
+    font-weight: 700;
     padding: 20px;
+    background-color: transparent;
+}
+
+::placeholder {
+    font-family: 'Roboto Mono', 'Courier', 'monospace';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#submit-button {
+    height: 40px;
+    width: 40px;
 }
