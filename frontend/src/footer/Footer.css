@@ -1,3 +1,65 @@
-.Form {
-    
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
+
+.Footer {
+    bottom: 0;
+    position: fixed;
+    background-color: #000;
+    padding-top: 70px;
+    padding-bottom: 40px;
+    width: 100vw;
+}
+
+.icon {
+    padding-right: 25px;
+    width: 20px;
+}
+
+.social {
+    display: inline-block;
+    padding-top: 20px;
+}
+
+#social-box {
+    padding: 20px;
+    padding-left: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menutext {
+    color: #fff;
+    font-family: 'Roboto Mono', Courier, monospace;
+    font-weight: 300;
+}
+.menutext.left {
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 15px;
+}
+
+.menutext.right {
+    text-align: right;
+    padding-right: 40px;
+    padding-bottom: 30px;
+}
+
+#dsoc-logo {
+    position: absolute;
+    padding: 30px;
+    padding-right: 35px;
+    height: 40px;
+    top: 0;
+    right: 0;
+}
+
+#newsletter-box {
+    align-content: right;
+    height: 10px;
+    width: 300px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff;
+    color: #fff;
+    padding: 20px;
 }
