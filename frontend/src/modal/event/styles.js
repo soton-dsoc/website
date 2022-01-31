@@ -6,8 +6,3 @@ export const TitleWrapper = styled.div`
     border-radius: 50px;
     padding: 0.5rem 3rem;
 `
-
-export const ModalWrapper = styled.div`
-    background-color: #5E5E5E;
-    padding: 5rem;
-`
