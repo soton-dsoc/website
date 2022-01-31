@@ -22,6 +22,12 @@
     height: 80px;    
 }
 
+@media only screen and (max-width: 600px)  {
+    .right > img {
+        height: 50px;    
+    }
+}
+
 .pages {
     color: white;
     display: flex;
