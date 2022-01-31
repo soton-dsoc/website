@@ -11,30 +11,32 @@ class Footer extends React.Component {
         return (
             <div className="Footer">
                 <Button>This is the footer</Button>
-                <div class="twitter" id="twitter-box">
-                    <div class="icon" id="twitter-icon">
-                        {twitterLogo}
-                    </div>
-                    <div class="username" id="twitter-username">
+                {/* <div class="social" id="social-box">
+                    <div class="twitter" id="twitter-box">
+                        <div class="icon" id="twitter-icon">
+                            {twitterLogo}
+                        </div>
+                        <div class="username" id="twitter-username">
 
+                        </div>
                     </div>
-                </div>
-                <div class="linkedin" id="linkedin-box">
-                    <div class="icon" id="linkedin-icon">
-                        {linkedinLogo}
-                    </div>
-                    <div class="username" id="linkedin-username">
+                    <div class="linkedin" id="linkedin-box">
+                        <div class="icon" id="linkedin-icon">
+                            {linkedinLogo}
+                        </div>
+                        <div class="username" id="linkedin-username">
 
+                        </div>
                     </div>
-                </div>
-                <div class="discord" id="discord-box">
-                    <div class="icon" id="discord-icon">
-                        {discordLogo}
-                    </div>
-                    <div class="username" id="discord-server">
+                    <div class="discord" id="discord-box">
+                        <div class="icon" id="discord-icon">
+                            {discordLogo}
+                        </div>
+                        <div class="username" id="discord-server">
 
+                        </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     };
