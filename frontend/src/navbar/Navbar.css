@@ -1,6 +1,34 @@
 .Navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+ 
+.left > img {
+    height: 50px;
+}
+
+.right > img {
+    height: 80px;    
+}
+
+.pages {
+    color: white;
+    display: flex;
+    margin-left: 20px;
+}
+
+.pages > div {
+    margin-left: 10px;
+    margin-right: 10px;
 }
