@@ -28,14 +28,21 @@ class Footer extends React.Component {
                         </img>
                     </div>
                 </div>
-                <div class="menutext left" id="home">Home</div>
-                <div class="menutext left" id="home">About</div>
-                <div class="menutext left" id="home">Events</div>
+                <div class="footertext left" id="home">Home</div>
+                <div class="footertext left" id="home">About</div>
+                <div class="footertext left" id="home">Events</div>
                 <div id="dsoc-icon">
                     <img id="dsoc-logo" src={dsocLogo}></img>
                 </div>
-                <div class="menutext right">Subscribe to our newsletter</div>
-                <div id="newsletter-box">Hllo</div>
+                <form action="">
+                    <label for="email" class="footertext right">Subscribe to our newsletter</label>
+                    <div class="form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Enter your email address" type="email" />
+                    </div>
+                    <div class="button-holder">
+                        <button id="submit-button" class="submit" value="Submit">PAPER PLANE ICON</button>
+                    </div>
+                </form>
             </div>
         );
     };
