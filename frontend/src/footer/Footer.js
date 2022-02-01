@@ -36,7 +36,7 @@ class Footer extends React.Component {
                     <img alt="" id="dsoc-logo" src={dsocLogo}></img>
                 </div>
                 <div className="EmailForm">
-                    <EmailForm />
+                    <EmailForm/>
                 </div>
             </div>
         );

@@ -53,10 +53,13 @@
     top: 80px;
 } */
 
-.EmailForm {
+/* .EmailForm {
     position: absolute;
     bottom: 50px;
-    right: 300px; 
-    width: 500px;
+    right: 300px;
+    padding-right: 40px;
+    margin-bottom: 400px;
+    float: right;
+    width: 600px;
     background-color: green;
-}
+} */
