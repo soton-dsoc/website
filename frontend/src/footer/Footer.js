@@ -6,8 +6,10 @@ import twitterLogo from './twitter-logo.svg';
 import linkedinLogo from './linkedin-logo.svg';
 import discordLogo from './discord-logo.svg';
 import dsocLogo from './soton-dSoc-icon-white.svg';
+import EmailForm from './EmailForm';
 
 class Footer extends React.Component {
+
     render() {
         return (
             <div className="Footer">
@@ -28,21 +30,15 @@ class Footer extends React.Component {
                         </img>
                     </div>
                 </div>
-                <div class="footertext left" id="home">Home</div>
-                <div class="footertext left" id="home">About</div>
-                <div class="footertext left" id="home">Events</div>
+                <div className="footertext left" id="home">Home</div>
+                <div className="footertext left" id="home">About</div>
+                <div className="footertext left" id="home">Events</div>
                 <div id="dsoc-icon">
                     <img id="dsoc-logo" src={dsocLogo}></img>
                 </div>
-                <form action="">
-                    <label for="email" class="footertext right">Subscribe to our newsletter</label>
-                    <div class="form-group">
-                        <input class="form-control" id="email" name="email" placeholder="Enter your email address" type="email" />
-                    </div>
-                    <div class="button-holder">
-                        <button id="submit-button" class="submit" value="Submit">PAPER PLANE ICON</button>
-                    </div>
-                </form>
+                <div className="EmailForm">
+                    <EmailForm />
+                </div>
             </div>
         );
     };

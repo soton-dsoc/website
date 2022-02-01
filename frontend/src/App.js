@@ -41,6 +41,7 @@ function App() {
                 <EventModal />
             </Modal>
             <Button onClick={() => setOpened(true)}>Open title modal</Button>
+            <Footer></Footer>
         </div>
     );
 }

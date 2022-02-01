@@ -1,0 +1,59 @@
+
+form {
+    border-radius: 5px;
+}
+
+#email {
+    height: 10px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Roboto Mono', 'Courier', 'monospace';
+    font-weight: 700;
+    padding: 20px;
+    background-color: transparent;
+}
+
+.box_expanded {
+    width: calc(100% - 100px);
+    animation: slidein 0.2s ease-in-out;
+}
+
+.box_compressed {
+    width: calc(100% - 50px);
+    animation: slideout 0.2s ease-in-out;
+}
+
+@keyframes slidein {
+    from {
+        width: calc(100% - 50px);
+    }
+    to {
+        width: calc(100% - 100px);
+    }
+}
+
+@keyframes slideout {
+    from {
+        width: calc(100% - 100px);
+    } to {
+        width: calc(100% - 50px);
+    }
+}
+
+::placeholder {
+    font-family: 'Roboto Mono', 'Courier', 'monospace';
+    font-weight: 300;
+    font-size: 18px;
+}
+
+#submit-button {
+    height: 40px;
+    width: 40px;
+}
+
+.textandform {
+    display: block;
+}
