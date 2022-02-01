@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
 
 .Footer {
+    position:relative;
     bottom: 0;
-    position: fixed;
     background-color: #000;
+    height: 6.5vw;
     padding-top: 70px;
     padding-bottom: 40px;
     width: 100vw;
