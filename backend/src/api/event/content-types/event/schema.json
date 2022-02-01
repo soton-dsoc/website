@@ -44,6 +44,12 @@
     },
     "Objectives": {
       "type": "text"
+    },
+    "forms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::form.form",
+      "mappedBy": "event"
     }
   }
 }

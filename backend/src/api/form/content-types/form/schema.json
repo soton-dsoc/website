@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "speakers",
+  "collectionName": "forms",
   "info": {
-    "singularName": "speaker",
-    "pluralName": "speakers",
-    "displayName": "Speaker"
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form"
   },
   "options": {
     "draftAndPublish": true
@@ -17,14 +17,14 @@
     "Email": {
       "type": "email"
     },
-    "Role": {
-      "type": "string"
+    "Responses": {
+      "type": "richtext"
     },
-    "events": {
+    "event": {
       "type": "relation",
-      "relation": "manyToMany",
+      "relation": "manyToOne",
       "target": "api::event.event",
-      "mappedBy": "speakers"
+      "inversedBy": "forms"
     }
   }
 }
