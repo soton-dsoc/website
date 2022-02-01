@@ -29,9 +29,9 @@ class Footer extends React.Component {
                         </img>
                     </div>
                 </div>
-                <div className="footertext left" id="home">Home</div>
-                <div className="footertext left" id="home">About</div>
-                <div className="footertext left" id="home">Events</div>
+                <div className="footertext">Home</div>
+                <div className="footertext">About</div>
+                <div className="footertext">Events</div>
                 <div id="dsoc-icon">
                     <img alt="" id="dsoc-logo" src={dsocLogo}></img>
                 </div>

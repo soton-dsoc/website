@@ -1,6 +1,8 @@
 import './EmailForm.css';
 import React from 'react';
 
+import planeLogo from './Exclude.svg';
+
 class EmailForm extends React.Component {
 
     constructor(props) {
@@ -27,13 +29,15 @@ class EmailForm extends React.Component {
     render() {
         return (
             <form action="">
-                <label for="email" className="footertext right">
-                    <div className="textandform">
+                <label for="email">
+                    <div className="textandform" id="subscribe-text">
                         Subscribe to our newsletter
                     </div>
-                    <input className={this.state.value ? "box_expanded" : "box_compressed"} onChange={this.handleChange} id="email" name="email" placeholder="Enter your email address" type="email"/>
+                    <input className={this.state.value ? "box_compressed" : "box_expanded"} onChange={this.handleChange} id="email" name="email" placeholder="Enter your email address" type="email"/>
                 </label>
-                <input type="submit" value="PAPER PLANE" />
+                {/* <div> */}
+                <input id="paper-plane" src={planeLogo} type="image"/>
+                {/* </div> */}
             </form>
         );
     };
