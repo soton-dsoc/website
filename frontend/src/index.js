@@ -8,7 +8,13 @@ import { MantineProvider } from '@mantine/core';
 
 ReactDOM.render(
     <React.StrictMode>
-        <MantineProvider theme={{ colorScheme: 'dark' }}>
+        <MantineProvider theme={{ 
+            colorScheme: 'dark',
+            fontFamily: 'Roboto Mono',
+            headings: {
+                fontFamily: 'Roboto Mono'
+            }
+         }}>
             <App />
         </MantineProvider>
     </React.StrictMode>,

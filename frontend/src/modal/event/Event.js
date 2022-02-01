@@ -11,7 +11,7 @@ class EventModal extends React.Component {
                     <Title order={2} align='left'>Blockchain 101</Title>
                 </TitleWrapper>
                 <Space h="lg" />
-                <Grid gutter={100}>
+                <Grid gutter={30}>
                     <Grid.Col md={12} lg={8}>
                         <Group direction='column' grow>
                             <Text align="left">
@@ -53,7 +53,7 @@ class EventModal extends React.Component {
                         </Group>
                     </Grid.Col>
                     <Grid.Col md={12} lg={4}>
-                        <Group direction='column'>
+                        <Group direction='column' styles="text-align: right">
                             <Group direction='column'>
                                 <Title order={3} align='left'>When and Where</Title>
                                 <Text align='left'>

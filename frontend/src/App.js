@@ -18,13 +18,16 @@ function App() {
             
             <Navbar></Navbar>
             <Home></Home>
-            <About></About>
-            <Events></Events>
-            <Footer></Footer>
+            
+                <About></About>
+                <Events></Events>
+
+            {/* <Footer></Footer> */}
             <Modal
-            size="90%"
+            size="95%"
                 overlayColor='#5E5E5E'
-                padding={40}
+                overflow='inside'
+                padding={30}
                 centered
                 opened={opened}
                 onClose={() => setOpened(false)}
@@ -32,6 +35,7 @@ function App() {
                     modal: { backgroundColor: "#5E5E5E"}
                 }}
                 overlayColor="#000000"
+                title=""
                 overlayOpacity={0.90}
             >
                 <EventModal />
