@@ -1,0 +1,23 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend/
+    ports:
+      - "1337:1337"
+    environment:
+      DB_PROVIDER: postgres
+      NODE_ENV: production
+      DATABASE_HOST: db
+      DATABASE_PASSWORD: mypassword
+      SENDGRID_API_KEY: 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
+    
+  db:
+    image: postgres
+    restart: always
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: strapi
+      POSTGRES_USER: strapi
+      POSTGRES_PASSWORD: mypassword

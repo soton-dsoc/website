@@ -4,7 +4,7 @@ module.exports = ({ env }) => ({
         config: {
             provider: 'sendgrid',
             providerOptions: {
-                apiKey: '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',
+                apiKey: env("SENDGRID_API_KEY", "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"),
             },
             settings: {
                 defaultFrom: 'no-reply@soton-dsoc.org',
