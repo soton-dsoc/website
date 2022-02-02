@@ -12,30 +12,37 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="Footer">
-                <div className="footer-left">
+                <div className='footer-top'>
                     <div className="social-box">
                         <div className="twitter-box">
-                            <img alt="" src={twitterLogo} className="footer-icon" id="twitter-icon"/>
+                            <img alt="" src={twitterLogo} className="footer-icon" id="twitter-icon" />
                         </div>
                         <div className="linkedin-box">
-                            <img alt="" src={linkedinLogo} className="footer-icon" id="linkedin-icon"/>
+                            <img alt="" src={linkedinLogo} className="footer-icon" id="linkedin-icon" />
                         </div>
                         <div className="discord-box">
-                            <img alt="" src={discordLogo} className="footer-icon" id="discord-icon"/>
+                            <img alt="" src={discordLogo} className="footer-icon" id="discord-icon" />
                         </div>
                     </div>
-                    <div className="hae">
-                        <div className="hae-element">Home</div>
-                        <div className="hae-element">About</div>
-                        <div className="hae-element">Events</div>
+
+                    <div className="dsoc-icon">
+                        <img alt="" id="dsoc-logo" src={dsocLogo} />
                     </div>
                 </div>
-                <div className="footer-right">
-                    <div className="dsoc-icon">
-                        <img alt="" id="dsoc-logo" src={dsocLogo}/>
+
+                <div className='footer-bottom'>
+                    <div className="footer-left">
+                        <div className="hae">
+                            <div className="hae-element">Home</div>
+                            <div className="hae-element">About</div>
+                            <div className="hae-element">Events</div>
+                        </div>
                     </div>
-                    <div className="EmailForm">
-                        <EmailForm/>
+
+                    <div className="footer-right">
+                        <div className="EmailForm">
+                            <EmailForm />
+                        </div>
                     </div>
                 </div>
             </div>
