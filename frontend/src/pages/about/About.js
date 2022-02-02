@@ -8,7 +8,7 @@ import george from './george.png'
 
 function About() {
     return (
-        <div className='about'>
+        <div className='about' id="about">
             <h1>About us</h1>
             <p >
                 We are a group of enthusiasts seeking to discuss the emerging world of crypto, blockchain, web3 and beyond...

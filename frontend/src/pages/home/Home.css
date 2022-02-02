@@ -12,11 +12,14 @@
     flex: 1;
     display: flex; 
     align-items: center; 
+}
+
+.home-block-title {
     justify-content: center;
 }
 
 .home-block-cta {
-    justify-content: right;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {

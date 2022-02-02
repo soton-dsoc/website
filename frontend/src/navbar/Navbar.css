@@ -20,6 +20,10 @@
     align-items: center;
 
     transition: all 0.5s;
+
+    font-size: 16px;
+    font-weight: 400;
+    user-select: none;
 }
 
 .navbar-content-wrapper {
@@ -45,6 +49,7 @@
 .right > img {
     max-height: 70px; 
     margin-top: 7px;  
+    /* opacity: 0.5; */
 }
 
 @media only screen and (max-width: 1000px)  {
@@ -54,6 +59,11 @@
 
     .left > img {
         height: 40px;
+    }
+
+    .Navbar {
+        padding-left: 20px;
+
     }
 }
 

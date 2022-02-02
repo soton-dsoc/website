@@ -63,7 +63,7 @@ function Home() {
                     </div> */}
 
 
-                    <a className='home-button-whatson' style={{ display: 'grid' }} href='#events'>
+                    <a className='home-button-whatson' style={{ display: 'grid' }} onClick={ () => window._scrollToElement('events') }>
                         <div style={{ gridArea: '1 / 1 / 4 / 2', backgroundColor: '#0066FF', borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}></div>
                         <div style={{ gridArea: '1 / 2 / 2 / 3', background: 'linear-gradient(90deg, #0066FF, #9000A8)' }}></div>
 
