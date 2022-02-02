@@ -33,9 +33,6 @@ function Event(props) {
         organisers.current.innerHTML = _event.organisers.replaceAll("\n", "<br>")
     })
 
-
-    console.log(props)
-
     return (
         <div className='event' style={{ position: 'relative', background: 'linear-gradient(90deg, #222222, #464747' }}>
             <div className='event-snackbar flex row align-center justify-between' onClick={() => setOpen(!open)} style={{ background: _event.background }}>

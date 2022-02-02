@@ -31,7 +31,7 @@ class EmailForm extends React.Component {
             <form action="">
                 <div className="everything">
                         <div className="text-subscribe">
-                            <label for="email-newsletter">
+                            <label>
                                 Subscribe to our newsletter
                             </label>
                         </div>
