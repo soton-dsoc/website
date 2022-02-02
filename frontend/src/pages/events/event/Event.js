@@ -11,9 +11,7 @@ import configs from '../../../config';
 
 function Event(props) {
 
-    // const [open, setOpen] = useState(false)
     const [open, setOpen] = useState(true)
-
     let _event = props.event.attributes
 
     let date = new Date(_event.startDatetime)
@@ -28,17 +26,6 @@ function Event(props) {
     const speakers = createRef()
     const organisers = createRef()
 
-    const toggleEvent = () => {
-        setOpen(!open)
-        console.log(body, body.current)
-
-        setTimeout(() => {
-            console.log(body)
-            // if (!open) window._scrollTo(document.querySelector('.event-body').getBoundingClientRect().top + window.innerHeight/4)
-            if (!open) window._scrollTo(document.querySelector('.event-abstract').getBoundingClientRect().bottom)
-        }, 200);
-    }
-
     useEffect(() => {
         body.current.innerHTML = marked.parse(_event.body)
         objectives.current.innerHTML = _event.objectives.replaceAll("\n", "<br>")
@@ -51,7 +38,7 @@ function Event(props) {
 
     return (
         <div className='event' style={{ position: 'relative', background: 'linear-gradient(90deg, #222222, #464747' }}>
-            <div className='event-snackbar flex row align-center justify-between' onClick={() => toggleEvent()} style={{ background: _event.background }}>
+            <div className='event-snackbar flex row align-center justify-between' onClick={() => setOpen(!open)} style={{ background: _event.background }}>
                 <div className='event-snackbar-body'>
                     <div className='event-title'>
                         {_event.title}
