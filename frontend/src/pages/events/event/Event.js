@@ -1,17 +1,18 @@
 import './Event.css'
 
-import { createRef, useEffect, useState } from 'react';
+import { createRef, useEffect, useRef, useState } from 'react';
 
 import arrow from './arrow.svg'
 import { marked } from 'marked';
 
 import Form from './form/Form.js'
 import AddToCalendar from './calendar/Calendar';
+import configs from '../../../config';
 
 function Event(props) {
 
-    const [open, setOpen] = useState(false)
-    // const [open, setOpen] = useState(true)
+    // const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
 
     let _event = props.event.attributes
 
@@ -27,6 +28,17 @@ function Event(props) {
     const speakers = createRef()
     const organisers = createRef()
 
+    const toggleEvent = () => {
+        setOpen(!open)
+        console.log(body, body.current)
+
+        setTimeout(() => {
+            console.log(body)
+            // if (!open) window._scrollTo(document.querySelector('.event-body').getBoundingClientRect().top + window.innerHeight/4)
+            if (!open) window._scrollTo(document.querySelector('.event-abstract').getBoundingClientRect().bottom)
+        }, 200);
+    }
+
     useEffect(() => {
         body.current.innerHTML = marked.parse(_event.body)
         objectives.current.innerHTML = _event.objectives.replaceAll("\n", "<br>")
@@ -39,18 +51,13 @@ function Event(props) {
 
     return (
         <div className='event' style={{ position: 'relative', background: 'linear-gradient(90deg, #222222, #464747' }}>
-            <div className='event-snackbar flex row align-center justify-between' onClick={() => {
-                setOpen(!open)
-                setTimeout(() => {
-                    if (!open) window._scroll.animateScroll(window.scrollY + window.innerHeight/1.5)
-                }, 100);
-            }} style={{ background: _event.background }}>
+            <div className='event-snackbar flex row align-center justify-between' onClick={() => toggleEvent()} style={{ background: _event.background }}>
                 <div className='event-snackbar-body'>
                     <div className='event-title'>
-                        { _event.title }
+                        {_event.title}
                     </div>
                     <div className='event-subtitle'>
-                        { month } { day } ({ weekday }) @ { time }
+                        {month} {day} ({weekday}) @ {time}
                     </div>
                 </div>
 
@@ -69,8 +76,8 @@ function Event(props) {
 
                         <div className='event-images event-container'>
                             {
-                                _event.images.data.map(i => 
-                                    <img key={i.id} src={"http://10.14.200.195:1337" + i.attributes.url}></img>
+                                _event.images.data && _event.images.data.map(i =>
+                                    <img key={i.id} src={configs.api.baseUrl + i.attributes.url}></img>
                                 )
                             }
                         </div>
@@ -78,9 +85,9 @@ function Event(props) {
                     <div className='body-right event-container' style={{ flex: 3, marginLeft: '50px' }}>
                         <div className='event-date flex column' style={{ justifyContent: 'left' }}>
                             <div className='event-title'>Time & place</div>
-                            <span>{ month } { day } ({ weekday }) @ { time }</span>
-                            <span>{ _event.location }</span>
-                            <AddToCalendar></AddToCalendar>
+                            <span>{month} {day} ({weekday}) @ {time}</span>
+                            <span>{_event.location}</span>
+                            <AddToCalendar event={_event}></AddToCalendar>
                         </div>
 
                         <div className='event-organisers'>
@@ -101,7 +108,7 @@ function Event(props) {
                 </div>
 
                 <div>
-                    <Form questions={_event.questions} />
+                    <Form questions={_event.questions} eventId={props.event.id} />
                 </div>
             </div>
         </div>

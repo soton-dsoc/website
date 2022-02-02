@@ -2,13 +2,14 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import './Events.css';
 import Event from './event/Event.js'
+import configs from '../../config';
 
 function Events() {
 
     const [events, setEvents] = useState(null)
 
     useEffect(() => {
-        axios.get('http://10.14.200.195:1337/api/events?populate=*').then(r => {
+        axios.get(configs.api.baseUrl + '/api/events?populate=*').then(r => {
             setEvents(r.data.data)
         })
     }, [])
