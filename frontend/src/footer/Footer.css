@@ -1,16 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap'); */
 
 .Footer {
-    position:relative;
-    bottom: 0;
+    /* bottom: 0; */
     background-color: #000;
-    height: 6.5vw;
-    padding-top: 70px;
-    padding-bottom: 40px;
-    width: 100vw;
+    padding: 40px;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
-.icon {
+.footer-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-bottom {
+        flex-direction: column;
+    }
+
+    .footer-right {
+        margin-top: 20px;
+    }
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-icon {
+    height: 20px;
+}
+
+.hae {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+#dsoc-logo {
+    height: 35px;
+}
+
+.dsoc-icon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .icon {
     padding-right: 25px;
     width: 20px;
 }
@@ -23,7 +86,7 @@
 #social-box {
     padding: 20px;
     padding-left: 40px;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
 }
@@ -45,21 +108,4 @@
     height: 40px;
     top: 0;
     right: 0;
-}
-/* 
-#newsletter-form {
-    position: absolute;
-    right: 35px;
-    top: 80px;
-} */
-
-/* .EmailForm {
-    position: absolute;
-    bottom: 50px;
-    right: 300px;
-    padding-right: 40px;
-    margin-bottom: 400px;
-    float: right;
-    width: 600px;
-    background-color: green;
 } */

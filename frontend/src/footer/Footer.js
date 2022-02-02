@@ -12,31 +12,38 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="Footer">
-                <div id="social-box">
-                    <div className="social twitter" id="twitter-box">
-                        <img alt="" src={twitterLogo} className="icon" id="twitter-icon">
-                            
-                        </img>
+                <div className='footer-top'>
+                    <div className="social-box">
+                        <div className="twitter-box">
+                            <img alt="" src={twitterLogo} className="footer-icon" id="twitter-icon" />
+                        </div>
+                        <div className="linkedin-box">
+                            <img alt="" src={linkedinLogo} className="footer-icon" id="linkedin-icon" />
+                        </div>
+                        <div className="discord-box">
+                            <img alt="" src={discordLogo} className="footer-icon" id="discord-icon" />
+                        </div>
                     </div>
-                    <div className="social linkedin" id="linkedin-box">
-                        <img alt="" src={linkedinLogo} className="icon" id="linkedin-icon">
-                            
-                        </img>
-                    </div>
-                    <div className="social discord" id="discord-box">
-                        <img alt="" src={discordLogo} className="icon" id="discord-icon">
-                            
-                        </img>
+
+                    <div className="dsoc-icon">
+                        <img alt="" id="dsoc-logo" src={dsocLogo} />
                     </div>
                 </div>
-                <div className="footertext">Home</div>
-                <div className="footertext">About</div>
-                <div className="footertext">Events</div>
-                <div id="dsoc-icon">
-                    <img alt="" id="dsoc-logo" src={dsocLogo}></img>
-                </div>
-                <div className="EmailForm">
-                    <EmailForm/>
+
+                <div className='footer-bottom'>
+                    <div className="footer-left">
+                        <div className="hae">
+                            <div className="hae-element">Home</div>
+                            <div className="hae-element">About</div>
+                            <div className="hae-element">Events</div>
+                        </div>
+                    </div>
+
+                    <div className="footer-right">
+                        <div className="EmailForm">
+                            <EmailForm />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
