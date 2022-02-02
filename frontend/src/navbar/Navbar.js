@@ -22,18 +22,20 @@ function Navbar() {
     }
 
     return (
-        <div className="Navbar" style={ scroll ? { boxShadow: '0px 5px 20px 0px black', backgroundColor: 'rgba(0, 0, 0, 0.25)' } : null }>
-            <div className='left'>
-                <img src={dsocLogo}></img>
+        <div className="Navbar" style={scroll ? { boxShadow: '0px 5px 20px 0px black', backgroundColor: 'rgba(0, 0, 0, 0.25)' } : null}>
+            <div className='navbar-content-wrapper'>
+                <div className='left'>
+                    <img src={dsocLogo}></img>
 
-                <div className='pages'>
-                    <div>About</div>
-                    <div>Events</div>
+                    <div className='pages'>
+                        <div>About</div>
+                        <div>Events</div>
+                    </div>
                 </div>
-            </div>
 
-            <div className='right'>
-                <img src={uosLogo}></img>
+                <div className='right'>
+                    <img src={uosLogo}></img>
+                </div>
             </div>
         </div>
     )

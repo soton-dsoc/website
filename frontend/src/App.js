@@ -14,17 +14,19 @@ window._scroll = new smoothScrollPolyfillsMin('a[href*="#"]')
 
 function App() {
     // const [opened, setOpened] = useState(false);
-    
+
 
     return (
         <div className="App">
-            
+
             <Navbar></Navbar>
-            <Home></Home>
-            <div style={{ maxWidth: '100%', padding: '0 8vw' }}>
-                <About></About>
-                <Events></Events>
-            </div>            
+            <div className='body-wrapper'>
+                <Home></Home>
+                <div style={{ maxWidth: '100%', padding: '0 8vw' }}>
+                    <About></About>
+                    <Events></Events>
+                </div>
+            </div>
 
 
             {/* <Footer></Footer> */}

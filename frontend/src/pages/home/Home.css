@@ -5,7 +5,7 @@
 .home {
     display: flex;
     height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
 }
 
 .home-block {
@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+.home-block-cta {
+    justify-content: right;
+}
+
 @media screen and (max-width: 1000px) {
     .home {
         flex-direction: column;
@@ -22,6 +26,10 @@
 
     .home-block-title {
         flex: 1.5;
+    }
+
+    .home-block-cta {
+        justify-content: center;
     }
 }
 

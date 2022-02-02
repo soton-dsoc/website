@@ -13,7 +13,9 @@ function Event(props) {
     const [open, setOpen] = useState(false)
     // const [open, setOpen] = useState(true)
 
-    let date = new Date(props.event.attributes.datetime)
+    let _event = props.event.attributes
+
+    let date = new Date(_event.datetime)
     let time = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
 
     let weekday = date.toLocaleDateString('en-GB', { weekday: 'long' })
@@ -26,10 +28,10 @@ function Event(props) {
     const organisers = createRef()
 
     useEffect(() => {
-        body.current.innerHTML = marked.parse(props.event.attributes.body)
-        objectives.current.innerHTML = props.event.attributes.objectives.replaceAll("\n", "<br>")
-        speakers.current.innerHTML = props.event.attributes.speakers.replaceAll("\n", "<br>")
-        organisers.current.innerHTML = props.event.attributes.organisers.replaceAll("\n", "<br>")
+        body.current.innerHTML = marked.parse(_event.body)
+        objectives.current.innerHTML = _event.objectives.replaceAll("\n", "<br>")
+        speakers.current.innerHTML = _event.speakers.replaceAll("\n", "<br>")
+        organisers.current.innerHTML = _event.organisers.replaceAll("\n", "<br>")
     })
 
 
@@ -42,10 +44,10 @@ function Event(props) {
                 setTimeout(() => {
                     if (!open) window._scroll.animateScroll(window.scrollY + window.innerHeight/1.5)
                 }, 100);
-            }} style={{ background: props.event.attributes.background }}>
+            }} style={{ background: _event.background }}>
                 <div className='event-snackbar-body'>
                     <div className='event-title'>
-                        { props.event.attributes.title }
+                        { _event.title }
                     </div>
                     <div className='event-subtitle'>
                         { month } { day } ({ weekday }) @ { time }
@@ -67,7 +69,7 @@ function Event(props) {
 
                         <div className='event-images event-container'>
                             {
-                                props.event.attributes.images.data.map(i => 
+                                _event.images.data.map(i => 
                                     <img key={i.id} src={"http://10.14.200.195:1337" + i.attributes.url}></img>
                                 )
                             }
@@ -77,7 +79,8 @@ function Event(props) {
                         <div className='event-date flex column' style={{ justifyContent: 'left' }}>
                             <div className='event-title'>Time & place</div>
                             <span>{ month } { day } ({ weekday }) @ { time }</span>
-                            <span>{ props.event.attributes.location }</span>
+                            <span>{ _event.location }</span>
+                            <AddToCalendar></AddToCalendar>
                         </div>
 
                         <div className='event-organisers'>
@@ -98,7 +101,7 @@ function Event(props) {
                 </div>
 
                 <div>
-                    <Form questions={props.event.attributes.questions} />
+                    <Form questions={_event.questions} />
                 </div>
             </div>
         </div>

@@ -44,7 +44,7 @@ function Home() {
                 </div>
             </div>
 
-            <div className='home-block'>
+            <div className='home-block home-block-cta'>
                 <div className='flex column align-center justify-center'>
                     <div className='home-button home-button-join'>
                         Join us

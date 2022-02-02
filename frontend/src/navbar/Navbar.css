@@ -22,6 +22,16 @@
     transition: all 0.5s;
 }
 
+.navbar-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 1500px;
+}
+
 
 .left {
     display: flex;
