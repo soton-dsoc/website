@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "forms",
+  "info": {
+    "singularName": "form",
+    "pluralName": "forms",
+    "displayName": "Form",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "event": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::event.event",
+      "inversedBy": "forms"
+    },
+    "extras": {
+      "type": "json"
+    },
+    "school": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    }
+  }
+}

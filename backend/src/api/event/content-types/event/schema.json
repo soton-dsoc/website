@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "body": {
+      "type": "richtext",
+      "default": "Body"
+    },
+    "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "datetime": {
+      "type": "datetime"
+    },
+    "location": {
+      "type": "string"
+    },
+    "objectives": {
+      "type": "text"
+    },
+    "forms": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::form.form",
+      "mappedBy": "event"
+    },
+    "background": {
+      "type": "string",
+      "default": "linear-gradient(90deg, #0047FF, #00A3FF)"
+    },
+    "questions": {
+      "type": "json"
+    },
+    "organisers": {
+      "type": "text"
+    },
+    "speakers": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "decimal",
+      "min": 0.1,
+      "max": 96
+    }
+  }
+}
