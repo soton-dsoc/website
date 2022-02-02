@@ -14,10 +14,10 @@
     "@strapi/plugin-users-permissions": "4.0.5",
     "@strapi/provider-email-sendgrid": "^4.0.6",
     "@strapi/strapi": "^4.0.6",
-    "sqlite3": "^4.2.0"
+    "pg": "^8.7.1"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "SkymanOne"
   },
   "strapi": {
     "uuid": "09bbef30-4971-4d62-bbfc-fd05427afb68"
