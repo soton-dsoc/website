@@ -7,6 +7,7 @@ import eventImage from './event-image.png'
 import { marked } from 'marked';
 
 import Form from './form/Form.js'
+import AddToCalendar from './calendar/Calendar';
 
 function Event(props) {
 
@@ -60,6 +61,7 @@ function Event(props) {
                             <div className='event-title'>Time & place</div>
                             <span>February 8th @ 18:00</span>
                             <span>Physics buildng 46 / 2003</span>
+                            <AddToCalendar></AddToCalendar>
                         </div>
 
                         <div className='event-organisers'>
