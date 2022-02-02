@@ -30,7 +30,7 @@
         "videos"
       ]
     },
-    "datetime": {
+    "startDatetime": {
       "type": "datetime"
     },
     "location": {
@@ -58,10 +58,8 @@
     "speakers": {
       "type": "text"
     },
-    "duration": {
-      "type": "decimal",
-      "min": 0.1,
-      "max": 96
+    "endDatetime": {
+      "type": "datetime"
     }
   }
 }
