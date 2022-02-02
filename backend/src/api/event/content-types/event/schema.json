@@ -31,13 +31,16 @@
       ]
     },
     "startDatetime": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "location": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "objectives": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "forms": {
       "type": "relation",
@@ -53,13 +56,16 @@
       "type": "json"
     },
     "organisers": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "speakers": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "endDatetime": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     }
   }
 }
