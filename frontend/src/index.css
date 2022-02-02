@@ -2,6 +2,18 @@ html {
     /* scroll-behavior: smooth; */
 }
 
+a:link {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
+a:visited {
+    text-decoration: inherit;
+    color: inherit;
+    cursor: auto;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto Mono';
