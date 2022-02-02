@@ -6,6 +6,7 @@ import linkedinLogo from './linkedin-logo.svg';
 import discordLogo from './discord-logo.svg';
 import dsocLogo from './soton-dSoc-icon-white.svg';
 import EmailForm from './EmailForm';
+import { ColorInput } from '@mantine/core';
 
 class Footer extends React.Component {
 
@@ -14,14 +15,11 @@ class Footer extends React.Component {
             <div className="Footer">
                 <div className='footer-top'>
                     <div className="social-box">
-                        <div className="twitter-box">
-                            <img alt="" src={twitterLogo} className="footer-icon" id="twitter-icon" />
+                        <div className="discord-box">
+                            <img alt="" src={discordLogo} onClick={()=> window.open("https://discord.gg/xxNa7CUE8D", "_blank")} className="footer-icon" id="discord-icon" />
                         </div>
                         <div className="linkedin-box">
-                            <img alt="" src={linkedinLogo} className="footer-icon" id="linkedin-icon" />
-                        </div>
-                        <div className="discord-box">
-                            <img alt="" src={discordLogo} className="footer-icon" id="discord-icon" />
+                            <img alt="" src={linkedinLogo} onClick={()=> window.open("https://www.linkedin.com/company/dsoc/", "_blank")} className="footer-icon" id="linkedin-icon" />
                         </div>
                     </div>
 
@@ -33,9 +31,9 @@ class Footer extends React.Component {
                 <div className='footer-bottom'>
                     <div className="footer-left">
                         <div className="hae">
-                            <div className="hae-element">Home</div>
-                            <div className="hae-element">About</div>
-                            <div className="hae-element">Events</div>
+                            <div onClick={ () => window._scrollTo(0) }>Home</div>
+                            <div onClick={ () => window._scrollToElement('about') }>About</div>
+                            <div onClick={ () => window._scrollToElement('events') }>Events</div>
                         </div>
                     </div>
 
