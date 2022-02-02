@@ -8,7 +8,7 @@ import george from './george.png'
 
 function About() {
     return (
-        <div className='about' style={{ maxWidth: '100%', padding: '0 8vw' }}>
+        <div className='about'>
             <h1>About us</h1>
             <p >
                 We are a group of enthusiasts seeking to discuss the emerging world of crypto, blockchain, web3 and beyond...
@@ -19,7 +19,7 @@ function About() {
 
             <div className='spacer'></div>
 
-            <h2 className='text-center'>Core team</h2>
+            {/* <h2 className='text-center'>Core team</h2> */}
 
             <div className='team flex row' >
                 <div className='team-card flex row' >

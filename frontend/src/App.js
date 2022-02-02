@@ -5,12 +5,12 @@ import Events from './pages/events/Events.js'
 import About from './pages/about/About.js'
 import Footer from './footer/Footer.js'
 import EventModal from './modal/event/Event.js'
-import { Button, Modal } from '@mantine/core';
+// import { Button, Modal } from '@mantine/core';
 import { useState } from 'react';
 
 
 function App() {
-    const [opened, setOpened] = useState(false);
+    // const [opened, setOpened] = useState(false);
     
 
     return (
@@ -18,12 +18,14 @@ function App() {
             
             <Navbar></Navbar>
             <Home></Home>
-            
+            <div style={{ maxWidth: '100%', padding: '0 8vw' }}>
                 <About></About>
                 <Events></Events>
+            </div>            
+
 
             {/* <Footer></Footer> */}
-            <Modal
+            {/* <Modal
             size="95%"
                 overlayColor='#5E5E5E'
                 overflow='inside'
@@ -39,8 +41,8 @@ function App() {
                 overlayOpacity={0.90}
             >
                 <EventModal />
-            </Modal>
-            <Button onClick={() => setOpened(true)}>Open title modal</Button>
+            </Modal> */}
+            {/* <Button onClick={() => setOpened(true)}>Open title modal</Button> */}
         </div>
     );
 }

@@ -61,15 +61,28 @@ function Home() {
                 <div className='flex column align-center justify-center'>
                     <div className='home-button home-button-join'>
                         Join us
-                        <DiscordLogo style={{ height: '20px' }}></DiscordLogo>
+                        <DiscordLogo style={{ height: '20px', marginLeft: '5px' }}></DiscordLogo>
                     </div>
 
 
-                    <div className='home-button home-button-whatson' style={{ position: 'relative', padding: '5px', background: 'linear-gradient(90deg, #0066FF, #9000A8)'}}>
+                    {/* <div className='home-button home-button-whatson' style={{ position: 'relative', padding: '5px', background: 'linear-gradient(90deg, #0066FF, #9000A8)'}}>
                         <div className='flex align-center justify-center' style={{ paddingTop: '5px', paddingBottom: '5px', width: '100%', backgroundColor: 'black'}}>
                             <span>What's on</span>
                         </div>
-                    </div>
+                    </div> */}
+
+
+                    <a className='home-button-whatson' style={{ display: 'grid' }} href='#events' onClick={ () => window.setOpen(true) }>
+                        <div style={{ gridArea: '1 / 1 / 4 / 2', backgroundColor: '#0066FF', borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}></div>
+                        <div style={{ gridArea: '1 / 2 / 2 / 3', background: 'linear-gradient(90deg, #0066FF, #9000A8)' }}></div>
+
+                        <div style={{ gridArea: '2 / 2 / 3 / 3', padding: '5px 0', textAlign: 'center', backgroundColor: 'rgba(0,0,0,0.2)' }}>
+                            What's on
+                        </div>
+
+                        <div style={{ gridArea: '1 / 3 / 4 / 4', backgroundColor: '#9000A8', borderTopRightRadius: '5px', borderBottomRightRadius: '5px' }}></div>
+                        <div style={{ gridArea: '3 / 2 / 4 / 3', background: 'linear-gradient(90deg, #0066FF, #9000A8)' }}></div>
+                    </a>
                 </div>
             </div>
         </div>

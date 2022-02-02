@@ -40,6 +40,8 @@
     /* box-shadow: ; */
 }
 
+
+
 .home-button-join {
     transition: all 1s;
     background: linear-gradient(90deg, #9000A8, #0066FF);
@@ -55,13 +57,22 @@
 }
 
 .home-button-whatson {
+    font-weight: 800;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    user-select: none;
     transition: all .4s;
-    min-width: 100%;
-    box-sizing: border-box;
+    width: 100%;
+    grid-template-columns: 5px 1fr 5px;
+    grid-template-rows: 5px 1fr 5px;
+    text-decoration: none;
+    color: white;
 }
 
 .home-button-whatson:hover {
-    min-width: 110%;
+    width: 110%;
 }
 
 
@@ -85,6 +96,10 @@
     }
 
     .home-button {
+        font-size: 20px;
+    }
+    
+    .home-button-whatson {
         font-size: 20px;
     }
 }
