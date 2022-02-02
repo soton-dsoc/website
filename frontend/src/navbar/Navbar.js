@@ -8,11 +8,11 @@ function Navbar() {
     const [scroll, setScroll] = useState(false)
 
     window.onscroll = (e) => {
-        if (window.scrollY > 10 && !scroll) {
+        if (window.scrollY > 10) {
             setScroll(true)
         }
 
-        else if (scroll) {
+        else {
             setScroll(false)
         }
     }

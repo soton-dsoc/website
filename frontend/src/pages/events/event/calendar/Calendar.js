@@ -7,10 +7,8 @@ const AddToCalendar = (props) => { // https://github.com/jekuer/add-to-calendar-
 
     useEffect(() => atcb_init());
 
-    let start = moment(props.event.startdate).format('MM-DD-YYYYTHH:MM')
-    let end = moment(props.event.enddate).format('MM-DD-YYYYTHH:MM')
-
-    console.log(start, end)
+    let start = moment(props.event.startDatetime).format('MM-DD-YYYYTHH:mm')
+    let end = moment(props.event.endDatetime).format('MM-DD-YYYYTHH:mm')
 
     const event = {
         name: props.event.title,
@@ -30,6 +28,8 @@ const AddToCalendar = (props) => { // https://github.com/jekuer/add-to-calendar-
         options: [
             "Apple",
             "Google",
+            "Outlook.com",
+            "iCal"
         ],
         timeZone: "Europe/London",
         timeZoneOffset: "+00:00",

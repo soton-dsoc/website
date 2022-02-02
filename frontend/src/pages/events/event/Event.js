@@ -16,7 +16,7 @@ function Event(props) {
 
     let _event = props.event.attributes
 
-    let date = new Date(_event.datetime)
+    let date = new Date(_event.startDatetime)
     let time = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
 
     let weekday = date.toLocaleDateString('en-GB', { weekday: 'long' })

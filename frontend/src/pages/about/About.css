@@ -2,6 +2,10 @@
     text-align: justify;
 }
 
+.about-text {
+    font-size: 18px;
+}
+
 
 .team-card {
     background: linear-gradient(45deg, #5E5E5E, #2B2B2B);

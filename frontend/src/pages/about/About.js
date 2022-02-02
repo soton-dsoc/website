@@ -10,16 +10,17 @@ function About() {
     return (
         <div className='about' id="about">
             <h1>About us</h1>
-            <p >
-                We are a group of enthusiasts seeking to discuss the emerging world of crypto, blockchain, web3 and beyond...
-            </p>
-            <p>
-                We are not experts on this, and we invite PhD students to give talks about advanced topics who you can ask more in-depth questions
-            </p>
 
-            <div className='spacer'></div>
+            <div className='about-text'>
+                <p >
+                    We are a group of enthusiasts seeking to discuss the emerging world of crypto, blockchain, web3 and beyond...
+                </p>
+                <p>
+                    We are not experts on this, and we invite PhD students to give talks about advanced topics who you can ask more in-depth questions
+                </p>
 
-            {/* <h2 className='text-center'>Core team</h2> */}
+                <div className='spacer'></div>
+            </div>
 
             <div className='team flex row' >
                 <div className='team-card flex row' >

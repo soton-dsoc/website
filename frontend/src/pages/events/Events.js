@@ -14,15 +14,14 @@ function Events() {
         })
     }, [])
 
-    if (!events) return null
+    // if (!events) return null
 
     return (
         <div id="events" style={{ marginTop: '50px' }}>
-            {/* <Button>Hello</Button> */}
             <h1>Events</h1>
             <div className='event-list flex column'>
                 {
-                    events.map((e) => 
+                    events && events.map((e) => 
                         <Event event={e} key={ e.id }></Event>
                     )
                 }
