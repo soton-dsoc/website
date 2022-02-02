@@ -7,6 +7,9 @@ import Footer from './footer/Footer.js'
 import EventModal from './modal/event/Event.js'
 // import { Button, Modal } from '@mantine/core';
 import { useState } from 'react';
+import smoothScrollPolyfillsMin from 'smooth-scroll';
+
+window._scroll = new smoothScrollPolyfillsMin('a[href*="#"]')
 
 
 function App() {
@@ -24,7 +27,7 @@ function App() {
             </div>            
 
 
-            <Footer></Footer>
+            {/* <Footer></Footer> */}
         </div>
     );
 }

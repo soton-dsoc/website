@@ -2,9 +2,12 @@ import { Input, Select, InputWrapper, TextInput, Chips, Chip } from '@mantine/co
 import { useState } from 'react'
 import './Form.css'
 
-function Form() {
+function Form(props) {
 
     const [studyAreas, setStudyArea] = useState(['Computer Science', 'Electronics', 'Business', 'Economics', 'Law'])
+
+    console.log(props.questions)
+
 
     return (
         <div className='Form'>
@@ -42,18 +45,31 @@ function Form() {
                 data={studyAreas}
             />
 
-            <InputWrapper
-                label="Are you familiar with any of these concepts?"
-                description="Select all you know"
-            >
-                <Chips multiple>
-                    <Chip value="react">Bitcoin</Chip>
-                    <Chip value="ng">Ethereum</Chip>
-                    <Chip value="svelte">Smart contracts</Chip>
-                    <Chip value="vue">Solidity</Chip>
-                    <Chip value="vue">OpenSea</Chip>
-                </Chips>
-            </InputWrapper>
+            {
+                props.questions !== null && props.questions.map((q, i) =>
+                    <InputWrapper
+                        label={q.text}
+                        description={q.description}
+                        key={i}
+                    >
+                        {
+                            q.type == "Chips" &&
+                            <Chips multiple style={{ fontWeight: 400 }}>
+
+                                {
+                                    q.options.map((o, j) =>
+                                        <Chip value={o} key={j}>{o}</Chip>
+                                    )
+                                }
+                            </Chips>
+                        }
+                    </InputWrapper>
+                )
+            }
+
+            <div className='event-register'>
+                <div className='event-button'>Register</div>
+            </div>
         </div>
     )
 }
