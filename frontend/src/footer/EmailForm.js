@@ -29,19 +29,21 @@ class EmailForm extends React.Component {
     render() {
         return (
             <form action="">
-                <div className="textform-n-button">
-                    <div className="textandform">
+                <div className="everything">
                         <div className="text-subscribe">
-                            <label for="email">
+                            <label for="email-newsletter">
                                 Subscribe to our newsletter
                             </label>
                         </div>
-                        <div className="form-subscribe">
-                            <input className={this.state.value ? "box_compressed" : "box_expanded"} onChange={this.handleChange} id="email" name="email" placeholder="Enter your email address" type="email"/>
+                    <div className="form-n-button">
+                        <div className="form-newsletter">
+                            <input onChange={this.handleChange} id="email-newsletter" name="email-newsletter" placeholder="Enter your email address" type="email"/>
                         </div>
-                    </div>
-                    <div className="paper-plane-div">
-                        <input id="paper-plane" src={planeLogo} type="image"/>
+                        {/* <div className="static-button-div"> */}
+                            <div className={this.state.value ? "button-shown" : "button-hidden"}>
+                                <input id="paper-plane" src={planeLogo} type="image"/>
+                            </div>
+                        {/* </div> */}
                     </div>
                 </div>
             </form>

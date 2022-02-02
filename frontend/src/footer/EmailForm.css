@@ -1,11 +1,6 @@
 :root {
-    --width-expanded: 350px;
-    --width-compressed: 50px;
-}
-
-
-.EmailForm {
-    clip: rect(0px, 401px, 111px, 0px);
+    --width-empty: 350px;
+    --width-expanded: 250px;
 }
 
 @media (max-width: 1000px) {
@@ -18,7 +13,7 @@
     }
 }
 
-#email {
+#email-newsletter {
     height: 10px;
     /* float: left; */
     border-style: solid;
@@ -32,10 +27,17 @@
     background-color: transparent;
 }
 
-.paper-plane-div {
+.form-n-button {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    justify-content: flex-end;
+}
+
+.everything {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    gap: 15px;
 }
 
 #subscribe-text {
@@ -52,28 +54,22 @@
     height: 60px;
 }
 
-.textandform {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.button-hidden {
+    width: 50%;
+    overflow-x: hidden;
 }
 
-.textform-n-button {
-    display: flex;
-    flex-direction: row;
-    gap: 15px;
+.button-shown {
+    width: 100%;
 }
 
-.form-subscribe {
+/* .static-button-div {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-}
-
-/* #email, #paper-plane-div {
-    display: inline-block;
+    justify-content: flex-end;
 } */
 
+/* 
 .box_expanded {
     width: var(--width-expanded);
     animation: slideout 0.2s ease-in-out;
@@ -84,7 +80,6 @@
     animation: slidein 0.2s ease-in-out;
 }
 
-/* Compresses the box */
 @keyframes slidein {
     from {
         width: var(--width-expanded);
@@ -94,7 +89,6 @@
     }
 }
 
-/* Extends the box */
 @keyframes slideout {
     from {
         width: var(--width-compressed);
@@ -102,6 +96,8 @@
         width: var(--width-expanded);
     }
 }
+*/
+
 
 /* ::placeholder {
     font-family: 'Roboto Mono', 'Courier', 'monospace';
