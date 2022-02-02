@@ -27,7 +27,7 @@ function App() {
             </div>            
 
 
-            {/* <Footer></Footer> */}
+            <Footer></Footer>
         </div>
     );
 }

@@ -28,19 +28,17 @@ class EmailForm extends React.Component {
 
     render() {
         return (
-            <div id="email-form-div">
-                <form action="">
-                    <label for="email">
-                        <div className="textandform" id="subscribe-text">
-                            Subscribe to our newsletter
-                        </div>
-                        <input className={this.state.value ? "box_compressed" : "box_expanded"} onChange={this.handleChange} id="email" name="email" placeholder="Enter your email address" type="email"/>
-                    </label>
-                    <div id="paper-plane-div">
-                        <input id="paper-plane" src={planeLogo} type="image"/>
+            <form action="">
+                <label for="email">
+                    <div className="textandform" id="subscribe-text">
+                        Subscribe to our newsletter
                     </div>
-                </form>
-            </div>
+                    <input className={this.state.value ? "box_compressed" : "box_expanded"} onChange={this.handleChange} id="email" name="email" placeholder="Enter your email address" type="email"/>
+                </label>
+                <div id="paper-plane-div">
+                    <input id="paper-plane" src={planeLogo} type="image"/>
+                </div>
+            </form>
         );
     };
 };
