@@ -57,6 +57,7 @@
 
     .event-images > img {
         width: 100% !important;
+        margin-bottom: 20px;
     }
 
     .event-snackbar {
@@ -76,15 +77,3 @@
 .body-right > div:not(:first-child) {
     margin-top: 50px;
 }
-
-.event-button {
-    border-radius: 5px;
-    padding: 10px 20px;
-    color: black;
-    background-color: white;
-    font-weight: 500;
-    display: inline-block;
-    cursor: pointer;
-    user-select: none;
-}
-

@@ -1,21 +1,8 @@
 import './Home.css';
-import { Button, Center, Grid, Group, Title, Text, Container } from '@mantine/core';
-import { useMediaQuery } from '@mantine/hooks';
 import React from 'react';
-import { useMantineTheme } from '@mantine/core';
 import { ReactComponent as DiscordLogo } from './discord-logo.svg'
-import styled from 'styled-components';
-
-const Shit = styled.div`
-    background-color: white;
-`
 
 function Home() {
-    const mediaQuery = useMediaQuery('(min-width: 992px)');
-    const theme = useMantineTheme();
-
-    console.log(theme.colors)
-
     return (
         // <Container padding={mediaQuery ? 100 : 30} fluid>
         //     <Grid style={{ height: '100vh' }} align="center">
@@ -72,7 +59,7 @@ function Home() {
                     </div> */}
 
 
-                    <a className='home-button-whatson' style={{ display: 'grid' }} href='#events' onClick={ () => window.setOpen(true) }>
+                    <a className='home-button-whatson' style={{ display: 'grid' }} href='#events'>
                         <div style={{ gridArea: '1 / 1 / 4 / 2', backgroundColor: '#0066FF', borderTopLeftRadius: '5px', borderBottomLeftRadius: '5px' }}></div>
                         <div style={{ gridArea: '1 / 2 / 2 / 3', background: 'linear-gradient(90deg, #0066FF, #9000A8)' }}></div>
 
