@@ -12,7 +12,7 @@ class Footer extends React.Component {
     render() {
         return (
             <div className="Footer">
-                <div className="left">
+                <div className="footer-left">
                     <div className="social-box">
                         <div className="twitter-box">
                             <img alt="" src={twitterLogo} className="footer-icon" id="twitter-icon"/>
@@ -25,12 +25,12 @@ class Footer extends React.Component {
                         </div>
                     </div>
                     <div className="hae">
-                        <div className="home">Home</div>
-                        <div className="about">About</div>
-                        <div className="events">Events</div>
+                        <div className="hae-element">Home</div>
+                        <div className="hae-element">About</div>
+                        <div className="hae-element">Events</div>
                     </div>
                 </div>
-                <div className="right">
+                <div className="footer-right">
                     <div className="dsoc-icon">
                         <img alt="" id="dsoc-logo" src={dsocLogo}/>
                     </div>
