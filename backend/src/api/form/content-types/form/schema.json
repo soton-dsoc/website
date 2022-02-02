@@ -4,27 +4,37 @@
   "info": {
     "singularName": "form",
     "pluralName": "forms",
-    "displayName": "Form"
+    "displayName": "Form",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string"
     },
-    "Email": {
+    "email": {
       "type": "email"
-    },
-    "Responses": {
-      "type": "richtext"
     },
     "event": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::event.event",
       "inversedBy": "forms"
+    },
+    "extras": {
+      "type": "json"
+    },
+    "school": {
+      "type": "string"
+    },
+    "experience": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
     }
   }
 }

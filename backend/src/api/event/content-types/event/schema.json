@@ -12,15 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "Body": {
+    "body": {
       "type": "richtext",
       "default": "Body"
     },
-    "Pictures": {
+    "images": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -30,19 +30,13 @@
         "videos"
       ]
     },
-    "Datetime": {
+    "datetime": {
       "type": "datetime"
     },
-    "Location": {
+    "location": {
       "type": "string"
     },
-    "speakers": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::speaker.speaker",
-      "inversedBy": "events"
-    },
-    "Objectives": {
+    "objectives": {
       "type": "text"
     },
     "forms": {
@@ -50,6 +44,24 @@
       "relation": "oneToMany",
       "target": "api::form.form",
       "mappedBy": "event"
+    },
+    "background": {
+      "type": "string",
+      "default": "linear-gradient(90deg, #0047FF, #00A3FF)"
+    },
+    "questions": {
+      "type": "json"
+    },
+    "organisers": {
+      "type": "text"
+    },
+    "speakers": {
+      "type": "text"
+    },
+    "duration": {
+      "type": "decimal",
+      "min": 0.1,
+      "max": 96
     }
   }
 }
