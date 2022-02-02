@@ -1,6 +1,7 @@
 import './Home.css';
 import React from 'react';
 import { ReactComponent as DiscordLogo } from './discord-logo.svg'
+import configs from '../../config.js'
 
 function Home() {
     return (
@@ -46,10 +47,13 @@ function Home() {
 
             <div className='home-block'>
                 <div className='flex column align-center justify-center'>
-                    <div className='home-button home-button-join'>
-                        Join us
-                        <DiscordLogo style={{ height: '20px', marginLeft: '5px' }}></DiscordLogo>
-                    </div>
+                    <a href={configs.main_discord_invite}>
+                        <div  className='home-button home-button-join'>
+                            Join us
+                            <DiscordLogo style={{ height: '20px', marginLeft: '5px' }}></DiscordLogo>
+                        </div>
+                    </a>
+
 
 
                     {/* <div className='home-button home-button-whatson' style={{ position: 'relative', padding: '5px', background: 'linear-gradient(90deg, #0066FF, #9000A8)'}}>
