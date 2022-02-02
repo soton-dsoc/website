@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&display=swap');
 
 .Footer {
+    position:relative;
     bottom: 0;
-    position: fixed;
     background-color: #000;
+    height: 6.5vw;
     padding-top: 70px;
     padding-bottom: 40px;
     width: 100vw;
@@ -27,21 +28,14 @@
     left: 0;
 }
 
-.menutext {
+.footertext {
     color: #fff;
     font-family: 'Roboto Mono', Courier, monospace;
     font-weight: 300;
-}
-.menutext.left {
+    font-size: 16px;
     text-align: left;
     padding-left: 40px;
     padding-top: 15px;
-}
-
-.menutext.right {
-    text-align: right;
-    padding-right: 40px;
-    padding-bottom: 30px;
 }
 
 #dsoc-logo {
@@ -52,14 +46,20 @@
     top: 0;
     right: 0;
 }
+/* 
+#newsletter-form {
+    position: absolute;
+    right: 35px;
+    top: 80px;
+} */
 
-#newsletter-box {
-    align-content: right;
-    height: 10px;
-    width: 300px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #fff;
-    color: #fff;
-    padding: 20px;
-}
+/* .EmailForm {
+    position: absolute;
+    bottom: 50px;
+    right: 300px;
+    padding-right: 40px;
+    margin-bottom: 400px;
+    float: right;
+    width: 600px;
+    background-color: green;
+} */

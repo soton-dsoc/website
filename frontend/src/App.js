@@ -24,25 +24,7 @@ function App() {
             </div>            
 
 
-            {/* <Footer></Footer> */}
-            {/* <Modal
-            size="95%"
-                overlayColor='#5E5E5E'
-                overflow='inside'
-                padding={30}
-                centered
-                opened={opened}
-                onClose={() => setOpened(false)}
-                styles={{
-                    modal: { backgroundColor: "#5E5E5E"}
-                }}
-                overlayColor="#000000"
-                title=""
-                overlayOpacity={0.90}
-            >
-                <EventModal />
-            </Modal> */}
-            {/* <Button onClick={() => setOpened(true)}>Open title modal</Button> */}
+            <Footer></Footer>
         </div>
     );
 }

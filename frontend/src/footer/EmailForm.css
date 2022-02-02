@@ -1,0 +1,92 @@
+.EmailForm {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: -165px;
+    margin-bottom: 40px;
+    float: right;
+    width: 600px;
+    clip: rect(0px, 401px, 111px, 0px);
+}
+
+@media (max-width: 1000px) {
+    .EmailForm {
+        position: relative;
+        background: green;
+        transform: scale(0.6, 0.6);
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+#email {
+    height: 8px;
+    float: left;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #fff;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Roboto Mono', 'Courier', 'monospace';
+    font-weight: 700;
+    padding: 20px;
+    background-color: transparent;
+}
+
+#paper-plane-div {
+    position: absolute;
+    margin-left: 15px;
+}
+
+#subscribe-text {
+    color: #fff;
+    font-family: 'Roboto Mono', Courier, monospace;
+    font-weight: 300;
+    font-size: 16px;
+    text-align: left;
+    padding: 15px;
+    padding-left: 0px;
+}
+
+#paper-plane, #paper-plane-div {
+    height: 60px;
+}
+
+#email, #paper-plane-div {
+    display: inline-block;
+}
+
+.box_expanded {
+    width: 350px;
+    animation: slideout 0.2s ease-in-out;
+}
+
+.box_compressed {
+    width: calc(350px - 100px);
+    animation: slidein 0.2s ease-in-out;
+}
+
+/* Compresses the box */
+@keyframes slidein {
+    from {
+        width: 350px;
+    }
+    to {
+        width: calc(350px - 100px);
+    }
+}
+
+/* Extends the box */
+@keyframes slideout {
+    from {
+        width: calc(350px - 100px);
+    } to {
+        width: 350px;
+    }
+}
+
+::placeholder {
+    font-family: 'Roboto Mono', 'Courier', 'monospace';
+    font-weight: 300;
+    font-size: 18px;
+}
