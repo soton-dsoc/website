@@ -1,10 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "dSoc",
+  "name": "University of Southampton Decentralised Society",
   "icons": [
     {
       "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "64x64 32x32 16x16",
       "type": "image/x-icon"
     },
     {
@@ -16,6 +16,11 @@
       "src": "logo512.png",
       "type": "image/png",
       "sizes": "512x512"
+    },
+    {
+      "src": "logo711.png",
+      "type": "image/png",
+      "sizes": "711x711"
     }
   ],
   "start_url": ".",

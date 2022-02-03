@@ -1,25 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './navbar/Navbar.js'
+import Home from './pages/home/Home.js'
+import Events from './pages/events/Events.js'
+import About from './pages/about/About.js'
+import Footer from './footer/Footer.js'
+import EventModal from './modal/event/Event.js'
+// import { Button, Modal } from '@mantine/core';
+import { useState } from 'react';
+import SmoothScroll from 'smooth-scroll';
+
+const smoothScroll = new SmoothScroll()
+
+window.smoothScroll = smoothScroll
+
+const scrollTo = (val) => {
+    smoothScroll.animateScroll(val)
+}
+
+window._scrollTo = (val) => {
+    smoothScroll.animateScroll(val)
+}
+
+window._scrollToElement = (el) => {
+    scrollTo(document.getElementById(el).getBoundingClientRect().top - window.innerHeight / 8 + window.scrollY)
+}
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // const [opened, setOpened] = useState(false);
+
+
+    return (
+        <div className="App">
+
+            <Navbar></Navbar>
+            <div className='body-wrapper'>
+                <Home></Home>
+                <div style={{ maxWidth: '100%', padding: '0 8vw' }}>
+                    <About></About>
+                    <Events></Events>
+                </div>
+            </div>
+
+
+            <Footer></Footer>
+        </div>
+    );
 }
 
 export default App;
