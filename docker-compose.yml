@@ -13,6 +13,7 @@ services:
     environment:
       DB_PROVIDER: postgres
       NODE_ENV: production
+      URL: https://backdoor.soto-dsoc.org
       DATABASE_HOST: db
       ADMIN_JWT_SECRET: ErhxCk10YqNCImwodl5Ml/Maqnw46oTyLjr+9Na4bjmJSLVWnCS90BJRAAkLsspj98caylAJgikBO9ZS0jEiOQ==)
       DATABASE_PASSWORD: mypassword

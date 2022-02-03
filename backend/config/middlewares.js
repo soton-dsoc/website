@@ -3,8 +3,14 @@ module.exports = [
   {
     name: 'strapi::security',
     config: {
-      contentSecurityPolicy: false
-    }
+      contentSecurityPolicy: false,
+      crossOriginOpenerPolicy: false,
+      crossOriginOpenerPolicy: false,
+      originAgentCluster: false,
+      contentSecurityPolicy: false,
+      xssFilter: false,
+      hsts: false,
+    },
   },
   'strapi::cors',
   'strapi::poweredBy',
