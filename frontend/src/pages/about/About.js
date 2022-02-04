@@ -54,7 +54,7 @@ function About() {
 
                 <p>
                     dSoc functions like a DAO (Decentralised Autonomous Organisation), meaning it's up to the collective agreement of its members to decide what dSoc can be.
-                    The society holds regular meetings to discuss current affairs in crypto world, new projects or trends on crypto markets.
+                    The society holds regular meetings to discuss current affairs in the world of crypto, emerging projects and crypto markets trends.
                 </p>
 
                 <p>
