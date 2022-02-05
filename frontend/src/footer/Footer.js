@@ -15,6 +15,9 @@ class Footer extends React.Component {
             <div className="Footer">
                 <div className='footer-top'>
                     <div className="social-box">
+                        <div className="twitter">
+                            <img alt="" src={twitterLogo} onClick={()=> window.open("https://twitter.com/SotonDsoc", "_blank")} className="footer-icon" id="twitter-icon" />
+                        </div>
                         <div className="discord-box">
                             <img alt="" src={discordLogo} onClick={()=> window.open("https://discord.gg/xxNa7CUE8D", "_blank")} className="footer-icon" id="discord-icon" />
                         </div>

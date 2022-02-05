@@ -27,7 +27,7 @@ function About() {
             `
         },
         {
-            name: "Victor Garcia",
+            name: "Víctor Gabaldón",
             photo: victor,
             text: `
             Deputy Education Officer
