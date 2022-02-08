@@ -16,6 +16,7 @@ function Event(props) {
 
     let date = new Date(_event.startDatetime)
     let time = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+    let currentDate = new Date()
 
     let weekday = date.toLocaleDateString('en-GB', { weekday: 'long' })
     let day = date.toLocaleDateString('en-GB', { day: '2-digit' })
@@ -92,7 +93,16 @@ function Event(props) {
                 </div>
 
                 <div>
-                    <Form questions={_event.questions} eventId={props.event.id} />
+                    {
+                        currentDate <= date
+                            ? 
+                                <Form questions={_event.questions} eventId={props.event.id} />
+                            : 
+                                <div>
+                                    This event has passed.
+                                </div>
+                    }
+
                 </div>
             </div>
         </div>
