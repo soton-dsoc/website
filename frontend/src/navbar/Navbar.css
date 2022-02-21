@@ -44,6 +44,7 @@
  
 .left > img {
     height: 50px;
+    cursor: pointer;
 }
 
 .right > img {
@@ -76,4 +77,5 @@
 .pages > div {
     margin-left: 10px;
     margin-right: 10px;
+    cursor: pointer;
 }
