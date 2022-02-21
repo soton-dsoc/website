@@ -60,8 +60,8 @@ function About() {
 
             <div className='team flex row' >
                 {
-                    team.map(p =>
-                        <div className='team-card flex row' >
+                    team.map((p, i) =>
+                        <div className='team-card flex row' key={i}>
                             <img src={p.photo} style={{ height: "100px" }} ></img>
                             <div className='team-card-text flex column'>
                                 <div className='team-card-name'>
