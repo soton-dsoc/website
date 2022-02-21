@@ -8,22 +8,41 @@ function Events() {
 
     const [events, setEvents] = useState(null)
 
+    const currentDate = new Date()
+
     useEffect(() => {
         axios.get(configs.api.baseUrl + '/api/events?populate=*').then(r => {
             setEvents(r.data.data)
         })
     }, [])
 
-    // if (!events) return null
-
     return (
         <div id="events" style={{ marginTop: '50px' }}>
-            <h1>Events</h1>
+            <h1>Current Events</h1>
+
             <div className='event-list flex column'>
                 {
-                    events && events.map((e) => 
-                        <Event event={e} key={ e.id }></Event>
-                    )
+                    events && events.filter(e => new Date(e.attributes.endDatetime) > currentDate)
+                        .sort((a, b) => {
+                        return new Date(b.attributes.startDatetime) - new Date(a.attributes.startDatetime)
+                    })
+                        .map((e, i) =>
+                            <Event event={e} key={i} open={i == 0}></Event>
+                        )
+                }
+            </div>
+
+            <h1>Past Events</h1>
+
+            <div className='event-list flex column'>
+                {
+                    events && events.filter(e => new Date(e.attributes.endDatetime) < currentDate)
+                        .sort((a, b) => {
+                        return new Date(b.attributes.startDatetime) - new Date(a.attributes.startDatetime)
+                    })
+                        .map((e, i) =>
+                            <Event event={e} key={i} open={ false }></Event>
+                        )
                 }
             </div>
         </div>

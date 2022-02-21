@@ -12,10 +12,10 @@ const AddToCalendar = (props) => { // https://github.com/jekuer/add-to-calendar-
 
     const event = {
         name: props.event.title,
-        description: "Decentralised Society",
+        description: "Decentralised Society Talk",
         startDate: start,
         endDate: end,
-        location: "Somewhere over the rainbow"
+        location: props.event.location
     }
 
     const defaultConfig = {

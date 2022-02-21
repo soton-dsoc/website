@@ -11,7 +11,7 @@ import configs from '../../../config';
 
 function Event(props) {
 
-    const [open, setOpen] = useState(true)
+    const [open, setOpen] = useState(props.open)
     let _event = props.event.attributes
 
     let date = new Date(_event.startDatetime)
