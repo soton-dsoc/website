@@ -1,13 +1,13 @@
-import './Event.css'
+import './Event.module.css'
 
 import { createRef, useEffect, useRef, useState } from 'react';
 
 import arrow from './arrow.svg'
 import { marked } from 'marked';
 
-import Form from './form/Form.js'
-import AddToCalendar from './calendar/Calendar';
-import configs from '../../../config';
+import Form from '../form/Form.js'
+import AddToCalendar from '../calendar/Calendar';
+import configs from '../../config';
 
 function Event(props) {
 

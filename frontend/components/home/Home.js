@@ -1,6 +1,6 @@
-import './Home.css';
+import './Home.module.css';
 import React from 'react';
-import { ReactComponent as DiscordLogo } from './discord-logo.svg'
+// import { DiscordLogo } from './discord-logo.svg'
 import configs from '../../config.js'
 
 function Home() {
@@ -23,7 +23,7 @@ function Home() {
                     <a href={configs.discord_invite} target="_blank">
                         <div  className='home-button home-button-join'>
                             Join us
-                            <DiscordLogo style={{ height: '20px', marginLeft: '5px' }}></DiscordLogo>
+                            {/* <DiscordLogo style={{ height: '20px', marginLeft: '5px' }}></DiscordLogo> */}
                         </div>
                     </a>
 

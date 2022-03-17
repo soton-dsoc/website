@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import './Events.css';
-import Event from './event/Event.js'
+import './Events.module.css';
+import Event from '../event/Event.js'
 import configs from '../../config';
 
 function Events() {
@@ -21,7 +21,7 @@ function Events() {
             <h1>Events</h1>
             <div className='event-list flex column'>
                 {
-                    events && events.map((e) => 
+                    events && events.map((e) =>
                         <Event event={e} key={ e.id }></Event>
                     )
                 }

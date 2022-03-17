@@ -1,7 +1,7 @@
-:root {
+/* :root {
     --width-empty: 350px;
     --width-expanded: 250px;
-}
+} */
 
 @media (max-width: 1000px) {
     .EmailForm {
@@ -70,7 +70,7 @@
     justify-content: flex-end;
 } */
 
-/* 
+/*
 .box_expanded {
     width: var(--width-expanded);
     animation: slideout 0.2s ease-in-out;

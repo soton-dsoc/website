@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
-import './Calendar.css'
-import { atcb_init } from 'add-to-calendar-button';
+import './Calendar.module.css'
+// import { atcb_init } from 'add-to-calendar-button';
 import moment from 'moment';
 
-const AddToCalendar = (props) => { // https://github.com/jekuer/add-to-calendar-button
+export default function AddToCalendar(props) { // https://github.com/jekuer/add-to-calendar-button
 
-    useEffect(() => atcb_init());
+    // useEffect(() => atcb_init());
 
     let start = moment(props.event.startDatetime).format('MM-DD-YYYYTHH:mm')
     let end = moment(props.event.endDatetime).format('MM-DD-YYYYTHH:mm')
@@ -44,5 +44,3 @@ const AddToCalendar = (props) => { // https://github.com/jekuer/add-to-calendar-
         </div>
     );
 }
-
-export default AddToCalendar;

@@ -1,4 +1,4 @@
-import './EmailForm.css';
+import './EmailForm.module.css';
 import React from 'react';
 
 import planeLogo from './Exclude.svg';

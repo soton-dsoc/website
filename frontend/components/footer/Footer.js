@@ -1,4 +1,4 @@
-import './Footer.css';
+import './Footer.module.css';
 import React from 'react';
 
 import twitterLogo from './twitter-logo.svg';
